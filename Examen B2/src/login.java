@@ -39,6 +39,12 @@ public class login {
                         String noombre = resultSet.getString("username");
                         String contraseña = resultSet.getString("password");
                         JOptionPane.showMessageDialog(panel1, "Login exitoso");
+                        JFrame frame2 = new JFrame("REGISTRO");
+                        frame2.setContentPane(new Registrar_Pacientes().panel2);
+                        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        frame2.setSize(700, 700);
+                        frame2.pack();
+                        frame2.setVisible(true);
                     } else {
                         JOptionPane.showMessageDialog(panel1, "Credenciales incorrectas");
                     }
