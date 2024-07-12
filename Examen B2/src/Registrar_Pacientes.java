@@ -59,6 +59,13 @@ public class Registrar_Pacientes {
 
                     cadenaPreparada.executeUpdate();
 
+                    JFrame frame3 = new JFrame("BUSQUEDA DE PACIENTE");
+                    frame3.setContentPane(new Busqueda_de_Pacientes().panel3);
+                    frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame3.setSize(700, 700);
+                    frame3.pack();
+                    frame3.setVisible(true);
+
                     JOptionPane.showMessageDialog(panel2, "Se ha registrado el paciente con exito");
                 } catch (SQLException ex) {
                     ex.printStackTrace();
